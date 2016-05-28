@@ -8,11 +8,12 @@ ML_FLAG = /c /coff		#±‡“Î—°œÓ
 $(EXE): $(OBJS) $(RES)
 	Link $(LINK_FLAG) $(OBJS) $(RES)
 
-.asm.obj:
+%.obj: %.asm
 	ml $(ML_FLAG) $<
-.rc.res:
+%.res: %.rc
 	rc $<
 
 clean:
-	del *.obj
-	del *.res
+	@del *.obj
+	@del *.res
+	@del *.exe
