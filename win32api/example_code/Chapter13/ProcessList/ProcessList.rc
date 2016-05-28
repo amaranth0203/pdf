@@ -1,0 +1,20 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN		1000
+#define	DLG_MAIN		1000
+#define IDC_PROCESS		1001
+#define IDC_REFRESH		1002
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 76, 95, 190, 108
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "进程列表"
+FONT 9, "宋体"
+{
+ LISTBOX IDC_PROCESS, 8, 5, 173, 86, LBS_STANDARD | LBS_SORT
+ PUSHBUTTON "刷新(&R)", IDC_REFRESH, 87, 90, 45, 14
+ DEFPUSHBUTTON "终止(&T)", IDOK, 137, 90, 45, 14, BS_DEFPUSHBUTTON | WS_DISABLED | WS_TABSTOP
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

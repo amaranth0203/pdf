@@ -1,0 +1,23 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN		1000
+#define	DLG_MAIN		100
+#define IDC_MEMORY		101
+#define IDC_COUNT		102
+#define	IDC_INFO		103
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 308, 207, 130, 50
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "碎片内存演示"
+FONT 9, "宋体"
+{
+ RTEXT "申请内存总数：", -1, 7, 8, 60, 8
+ EDITTEXT IDC_MEMORY, 69, 5, 55, 12, ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_TABSTOP
+ RTEXT "申请次数：", -1, 7, 21, 60, 8
+ EDITTEXT IDC_COUNT, 69, 19, 55, 12, ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_TABSTOP
+ LTEXT "", IDC_INFO, 7, 37, 120, 8
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

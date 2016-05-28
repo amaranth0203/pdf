@@ -1,0 +1,21 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	DLG_MAIN		1
+#define	ICO_1			1
+#define	ICO_2			2
+#define	IDC_SETICON		100
+#define	IDC_COUNT		101
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_1	ICON		"1.ico"
+ICO_2	ICON		"2.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 50, 50, 113, 40
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "定时器例子"
+FONT 9, "宋体"
+{
+ ICON ICO_1, IDC_SETICON, 8, 9, 18, 21
+ LTEXT "计数：", -1, 35, 16, 25, 10
+ LTEXT "", IDC_COUNT, 62, 16, 40, 10
+}

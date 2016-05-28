@@ -1,0 +1,31 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN	1000
+#define	DLG_MAIN	1000
+#define	IDC_COUNT	1001
+#define	IDC_INC		1002
+#define IDC_DEC		1003
+#define IDC_NUM1	1004
+#define IDC_NUM2	1005
+#define IDC_MOD	1006
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 186, 132, 173, 79
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "DLL例子"
+FONT 9, "宋体"
+{
+ GROUPBOX "Dll 内部计数器", -1, 4, 2, 164, 32, BS_GROUPBOX
+ EDITTEXT IDC_COUNT, 10, 15, 73, 12, ES_READONLY
+ PUSHBUTTON "增加(&A)", IDC_INC, 86, 13, 36, 14
+ PUSHBUTTON "减少(&D)", IDC_DEC, 123, 13, 37, 14
+ GROUPBOX "取模函数测试", -1, 4, 37, 164, 32, BS_GROUPBOX
+ EDITTEXT IDC_NUM1, 11, 50, 43, 12, ES_NUMBER
+ LTEXT "%", -1, 57, 52, 5, 8
+ EDITTEXT IDC_NUM2, 64, 50, 43, 12, ES_NUMBER
+ LTEXT "=", -1, 110, 52, 5, 8
+ EDITTEXT IDC_MOD, 117, 50, 43, 12, ES_READONLY
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

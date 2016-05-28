@@ -1,0 +1,35 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include	<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN		1000
+#define	DLG_MAIN		2000
+#define IDC_CONN_STR	2001
+#define	IDC_CONN		2002
+#define	IDC_DISCONN		2003
+#define	IDC_SQL			2004
+#define	IDC_EXEC		2005
+#define	IDC_LIST		2006
+#define	IDC_INFO		2007
+#define IDC_COMMIT		2008
+#define IDC_ROLLBACK	2009
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	icon	"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 51, 78, 465, 237
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "ODBC数据库操作例子"
+FONT 9, "宋体"
+{
+ EDITTEXT IDC_CONN_STR, 65, 5, 290, 12, ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP
+ PUSHBUTTON "连接(&C)", IDC_CONN, 359, 4, 50, 14
+ PUSHBUTTON "断开(&D)", IDC_DISCONN, 412, 4, 50, 14, WS_DISABLED | WS_TABSTOP
+ EDITTEXT IDC_SQL, 40, 22, 261, 12, ES_AUTOHSCROLL | WS_DISABLED | WS_BORDER | WS_TABSTOP
+ DEFPUSHBUTTON "执行(&E)", IDC_EXEC, 306, 21, 50, 14, BS_DEFPUSHBUTTON | WS_DISABLED | WS_TABSTOP
+ PUSHBUTTON "提交(&M)", IDC_COMMIT, 359, 21, 50, 14, WS_DISABLED | WS_TABSTOP
+ PUSHBUTTON "回滚(&R)", IDC_ROLLBACK, 412, 21, 50, 14, WS_DISABLED | WS_TABSTOP
+ CONTROL "", IDC_LIST, "SysListView32", 13 | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 2, 56, 460, 179
+ LTEXT "SQL语句", -1, 5, 24, 34, 8
+ LTEXT "ODBC连接字符串", -1, 5, 8, 60, 8
+ LTEXT "", IDC_INFO, 5, 38, 455, 18
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

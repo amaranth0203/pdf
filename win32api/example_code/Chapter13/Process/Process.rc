@@ -1,0 +1,24 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN		1000
+#define	DLG_MAIN		1000
+#define IDC_FILE		1001
+#define IDC_CMDLINE		1002
+#define IDC_BROWSE		1003
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 111, 104, 201, 57
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "执行文件"
+FONT 9, "宋体"
+{
+ LTEXT "文件名", -1, 7, 8, 25, 8
+ EDITTEXT IDC_FILE, 35, 5, 160, 12, ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP
+ LTEXT "命令行", -1, 7, 25, 25, 8
+ EDITTEXT IDC_CMDLINE, 35, 22, 160, 12, ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP
+ PUSHBUTTON "浏览(&B)", IDC_BROWSE, 115, 38, 40, 14
+ PUSHBUTTON "执行(&E)", IDOK, 155, 38, 40, 14, WS_DISABLED | WS_TABSTOP
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

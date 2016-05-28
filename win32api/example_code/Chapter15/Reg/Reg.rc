@@ -1,0 +1,43 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN		1000
+#define	DLG_MAIN		1000
+#define IDC_KEY			1001
+#define IDC_VALUENAME	1002
+#define IDC_VALUE		1003
+#define IDC_TYPE		1004
+#define IDC_KEYLIST		1005
+#define IDC_SUBKEY		1006
+#define IDC_REMOVE_VALUE 1007
+#define IDC_GET_VALUE	1008
+#define IDC_SET_VALUE	1009
+#define IDC_CREATE_SUBKEY 1010
+#define IDC_REMOVE_SUBKEY 1011
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 205, 107, 245, 206
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "注册表操作"
+FONT 9, "宋体"
+{
+ RTEXT "键名 HKEY_LOCAL_MACHINE\", -1, 9, 9, 105, 8
+ EDITTEXT IDC_KEY, 118, 7, 121, 12, ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP
+ RTEXT "键值名", -1, 4, 26, 30, 8
+ EDITTEXT IDC_VALUENAME, 39, 24, 139, 12, ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP
+ RTEXT "键值", -1, 4, 43, 30, 8
+ EDITTEXT IDC_VALUE, 39, 41, 201, 12, ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP
+ RTEXT "类型", -1, 4, 59, 30, 8
+ COMBOBOX IDC_TYPE, 39, 58, 78, 77, CBS_DROPDOWNLIST | WS_TABSTOP
+ LTEXT "当前键下的所有的子键名：", -1, 8, 78, 141, 8
+ EDITTEXT IDC_KEYLIST, 6, 92, 232, 91, ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_TABSTOP
+ RTEXT "子键名", -1, 7, 191, 30, 8
+ EDITTEXT IDC_SUBKEY, 42, 189, 73, 12, ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP
+ PUSHBUTTON "删除键值", IDC_REMOVE_VALUE, 183, 23, 57, 14
+ PUSHBUTTON "读取键值", IDC_GET_VALUE, 122, 57, 57, 14
+ PUSHBUTTON "保存键值", IDC_SET_VALUE, 183, 57, 57, 14
+ PUSHBUTTON "创建子键", IDC_CREATE_SUBKEY, 121, 188, 57, 14
+ PUSHBUTTON "删除子键", IDC_REMOVE_SUBKEY, 182, 188, 57, 14
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

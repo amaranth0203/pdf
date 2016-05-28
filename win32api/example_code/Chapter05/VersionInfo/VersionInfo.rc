@@ -1,0 +1,38 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+#include		<Version.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN		0x1000	//Í¼±ê
+ICO_MAIN	ICON		"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+1 VERSIONINFO
+FILEVERSION 1,2,3,4
+PRODUCTVERSION 2,3,4,5
+FILEOS VOS_WINDOWS32
+FILETYPE VFT_APP
+FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 0x4b0
+    END
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "Here is Comments\0"
+            VALUE "CompanyName", "Here is CompanyName\0"
+            VALUE "FileDescription", "Here is FileDescription\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Here is InternalName\0"
+            VALUE "LegalCopyright", "Here is LegalCopyright\0"
+            VALUE "LegalTrademarks", "Here is LegalTrademarks\0"
+            VALUE "OriginalFilename", "Here is OriginalFilename\0"
+            VALUE "PrivateBuild", "Here is PrivateBuild\0"
+            VALUE "ProductName", "Here is ProductName\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "Here is SpecialBuild\0"
+        END
+    END
+END
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

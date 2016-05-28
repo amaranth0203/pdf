@@ -1,0 +1,21 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN		1000
+#define	DLG_MAIN		100
+#define IDC_FILE		101
+#define IDC_BROWSE		102
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 84, 79, 201, 41
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Unix Text file -> PC Text file"
+FONT 9, "宋体"
+{
+ LTEXT "文件名", -1, 7, 8, 25, 8
+ EDITTEXT IDC_FILE, 35, 5, 160, 12, ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP
+ PUSHBUTTON "浏览(&B)", IDC_BROWSE, 115, 22, 40, 14
+ PUSHBUTTON "开始(&S)", IDOK, 155, 22, 40, 14, WS_DISABLED | WS_TABSTOP
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

@@ -1,0 +1,21 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN		1000
+#define	DLG_MAIN		1000
+#define IDC_COUNTER		1001
+#define IDC_PAUSE		1002
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 227, 187, 129, 48
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "“问题程序”——计数器"
+FONT 9, "宋体"
+{
+ LTEXT "计数值：", -1, 10, 10, 34, 8
+ EDITTEXT IDC_COUNTER, 47, 8, 71, 12, ES_READONLY | WS_BORDER | WS_TABSTOP
+ PUSHBUTTON "计数", IDOK, 8, 27, 50, 14
+ PUSHBUTTON "暂停/恢复", IDC_PAUSE, 68, 27, 50, 14, WS_DISABLED | WS_TABSTOP
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

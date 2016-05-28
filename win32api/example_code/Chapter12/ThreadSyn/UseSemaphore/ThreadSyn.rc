@@ -1,0 +1,22 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN		1000
+#define	DLG_MAIN		1000
+#define IDC_COUNTER1	1001
+#define IDC_COUNTER2	1002
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 227, 187, 129, 56
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "多线程同步（使用信号量）"
+FONT 9, "宋体"
+{
+ LTEXT "计数器一：", -1, 7, 7, 40, 8
+ LTEXT "计数器二：", -1, 7, 22, 41, 8
+ EDITTEXT IDC_COUNTER1, 51, 5, 71, 12, ES_READONLY | WS_BORDER | WS_TABSTOP
+ EDITTEXT IDC_COUNTER2, 51, 20, 71, 12, ES_READONLY | WS_BORDER | WS_TABSTOP
+ PUSHBUTTON "计数", IDOK, 72, 36, 50, 14
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

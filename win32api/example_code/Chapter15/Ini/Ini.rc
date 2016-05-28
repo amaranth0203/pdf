@@ -1,0 +1,36 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN	1000
+#define	DLG_MAIN	1000
+#define IDC_SEC		1001
+#define IDC_KEY		1002
+#define IDC_VALUE	1003
+#define IDC_INI		1004
+#define IDC_DEL_SEC	1005
+#define IDC_DEL_KEY	1006
+#define IDC_GET_KEY	1007
+#define IDC_SET_KEY	1008
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 205, 128, 245, 168
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "INI 文件操作"
+FONT 9, "宋体"
+{
+ RTEXT "Section", -1, 4, 7, 30, 8
+ EDITTEXT IDC_SEC, 39, 5, 78, 12, ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP
+ RTEXT "Key", -1, 4, 23, 30, 8
+ EDITTEXT IDC_KEY, 39, 21, 78, 12, ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP
+ RTEXT "Value", -1, 4, 39, 30, 8
+ EDITTEXT IDC_VALUE, 39, 37, 78, 12, ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP
+ LTEXT "当前 INI 文件内容：", -1, 8, 57, 141, 8
+ EDITTEXT IDC_INI, 6, 71, 232, 91, ES_MULTILINE | ES_AUTOVSCROLL | 
+	 ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_TABSTOP
+ PUSHBUTTON "删除 &Section", IDC_DEL_SEC, 122, 4, 57, 14
+ PUSHBUTTON "删除 K&ey", IDC_DEL_KEY, 183, 4, 57, 14
+ PUSHBUTTON "读取 &Key", IDC_GET_KEY, 122, 20, 57, 14
+ PUSHBUTTON "保存 Ke&y", IDC_SET_KEY, 183, 20, 57, 14
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

@@ -1,0 +1,33 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_BIG			0x1000
+#define	ICO_SMALL		0x1001
+#define	CUR_2			0x1000
+#define	IDM_MAIN		0x2000
+#define	IDM_EXIT		0x2101
+#define	IDM_BIG			0x2201
+#define	IDM_SMALL		0x2202
+#define	IDM_CUR1		0x2203
+#define	IDM_CUR2		0x2204
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_SMALL	ICON		"Small.ico"
+ICO_BIG		ICON		"Big.ico"
+CUR_2		CURSOR		"2.cur"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+IDM_MAIN	menu	discardable
+BEGIN
+	popup	"文件(&F)"
+	BEGIN
+		menuitem	"退出(&X)",		IDM_EXIT
+	END
+	popup	"图标和光标(&I)"
+	BEGIN
+		menuitem	"大图标(&G)",		IDM_BIG
+		menuitem	"小图标(&M)",		IDM_SMALL
+		menuitem	separator
+		menuitem	"光标A(&A)",		IDM_CUR1
+		menuitem	"光标B(&B)",		IDM_CUR2
+	END
+END
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

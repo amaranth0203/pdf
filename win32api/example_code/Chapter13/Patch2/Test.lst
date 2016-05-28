@@ -1,0 +1,14 @@
+//******************** Program Entry Point ********
+:00405120 60                      pushad
+:00405121 BE00504000              mov esi, 00405000
+:00405126 8DBE00C0FFFF            lea edi, dword ptr [esi+FFFFC000]
+:0040512C 57                      push edi
+:0040512D 83CDFF                  or ebp, FFFFFFFF
+:00405130 EB10                    jmp 00405142
+:00405132 90                      nop
+:00405133 90                      nop
+
+...
+
+:0040526E 61                      popad
+:0040526F E98CBDFFFF              jmp 00401000

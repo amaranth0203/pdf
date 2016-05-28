@@ -1,0 +1,22 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN		100
+#define	IDC_MAIN		100
+#define	IDC_MOVE		101
+#define	IDB_BACK1		100
+#define	IDB_CIRCLE1		101
+#define	IDB_MASK1		102
+#define	IDB_BACK2		103
+#define	IDB_CIRCLE2		104
+#define	IDB_MASK2		105
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"Main.ico"
+IDC_MAIN	CURSOR		"Main.cur"
+IDC_MOVE	CURSOR		"Move.cur"
+IDB_BACK1	BITMAP		"Back1.bmp"
+IDB_CIRCLE1	BITMAP		"Circle1.bmp"
+IDB_MASK1	BITMAP		"Mask1.bmp"
+IDB_BACK2	BITMAP		"Back2.bmp"
+IDB_CIRCLE2	BITMAP		"Circle2.bmp"
+IDB_MASK2	BITMAP		"Mask2.bmp"

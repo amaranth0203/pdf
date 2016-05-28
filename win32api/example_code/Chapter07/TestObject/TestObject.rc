@@ -1,0 +1,4 @@
+#define	ICO_MAIN		100
+#define	IDB_BACK		100
+ICO_MAIN	ICON		"Main.ico"
+IDB_BACK	BITMAP		"Back.bmp"

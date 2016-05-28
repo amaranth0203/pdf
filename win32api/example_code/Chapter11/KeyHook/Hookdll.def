@@ -1,0 +1,3 @@
+EXPORTS	HookProc
+	InstallHook
+	UninstallHook

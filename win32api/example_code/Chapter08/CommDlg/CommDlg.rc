@@ -1,0 +1,47 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN		1000
+#define	DLG_MAIN		1000
+#define	IDM_MAIN		1000
+#define	IDM_OPEN		1101
+#define	IDM_SAVEAS		1102
+#define	IDM_PAGESETUP	1103
+#define	IDM_EXIT		1104
+#define	IDM_FIND		1201
+#define	IDM_REPLACE		1202
+#define	IDM_SELFONT		1203
+#define	IDM_SELCOLOR	1204
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOGEX 150, 180, 250, 130
+MENU IDM_MAIN
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "通用对话框示例"
+FONT 9, "宋体"
+{
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+IDM_MAIN	menu	discardable
+BEGIN
+	popup	"文件(&F)"
+	BEGIN
+		menuitem	"打开文件(&O)...",	IDM_OPEN
+		menuitem	"文件另存为(&C)...",IDM_SAVEAS
+		menuitem	separator
+		menuitem	"页面设置(&P)...",IDM_PAGESETUP
+		menuitem	separator
+		menuitem	"退出(&X)",		IDM_EXIT
+	END
+	popup	"查看(&V)"
+	BEGIN
+		menuitem	"查找字符串(&S)...",IDM_FIND
+		menuitem	"替换字符串(&R)...",IDM_REPLACE
+		menuitem	separator
+		menuitem	"选择字体(&F)...",IDM_SELFONT
+		menuitem	"选择颜色(&B)...",IDM_SELCOLOR
+	END
+END
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

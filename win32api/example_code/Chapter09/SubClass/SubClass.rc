@@ -1,0 +1,21 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN	1000
+#define	DLG_MAIN	1000
+#define IDC_HEX		1001
+#define IDC_DEC		1002
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 107, 102, 129, 42
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Hex <> Dec"
+FONT 9, "ËÎÌו"
+{
+ LTEXT "Hex", -1, 7, 9, 15, 8
+ EDITTEXT IDC_HEX, 27, 7, 94, 12
+ LTEXT "Dec", -1, 7, 26, 15, 8
+ EDITTEXT IDC_DEC, 27, 24, 94, 12, ES_NUMBER
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

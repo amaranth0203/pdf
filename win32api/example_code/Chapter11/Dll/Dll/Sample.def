@@ -1,0 +1,4 @@
+EXPORTS
+	_IncCounter
+	_DecCounter
+	_Mod

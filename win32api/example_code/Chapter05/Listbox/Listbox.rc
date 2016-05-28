@@ -1,0 +1,24 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN		0x1000	//图标
+#define	DLG_MAIN		1
+#define IDC_LISTBOX1	101
+#define IDC_LISTBOX2	102
+#define	IDC_SEL1		103
+#define IDC_RESET		104
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 163, 160, 190, 108
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "列表框控件示例"
+FONT 9, "宋体"
+{
+ LISTBOX IDC_LISTBOX1, 6, 5, 55, 86, LBS_STANDARD
+ LISTBOX IDC_LISTBOX2, 68, 5, 115, 86, LBS_STANDARD | LBS_MULTIPLESEL
+ LTEXT "", IDC_SEL1, 6, 93, 55, 8
+ PUSHBUTTON "复位(&R)", IDC_RESET, 89, 90, 45, 14
+ DEFPUSHBUTTON "查看(&S)", IDOK, 139, 90, 45, 14, WS_DISABLED
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

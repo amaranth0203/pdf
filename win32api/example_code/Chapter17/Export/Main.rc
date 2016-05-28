@@ -1,0 +1,32 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include		<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN	1000
+#define	DLG_MAIN	1000
+#define IDC_INFO	1001
+#define	IDM_MAIN	2000
+#define	IDM_OPEN	2001
+#define	IDM_EXIT	2002
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	ICON		"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 50, 50, 250, 140
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "PE文件导出表查看程序"
+MENU IDM_MAIN
+FONT 9, "宋体"
+{
+ CONTROL "", IDC_INFO, "RichEdit20A", 196 | ES_WANTRETURN | WS_CHILD | ES_READONLY
+	 | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_TABSTOP, 0, 0, 249, 140
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+IDM_MAIN	menu	discardable
+BEGIN
+	popup	"文件(&F)"
+	BEGIN
+		menuitem	"打开文件(&O)...",	IDM_OPEN
+		menuitem	separator
+		menuitem	"退出(&X)",		IDM_EXIT
+	END
+END
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
